@@ -101,5 +101,6 @@ function hideClock(){
 $(document).ready(function(){
 	//updateClock(); // initial call
 	hideClock();
-	
+	var now = new Date();
+	$('.copy').prepend('&copy; ' +now.getUTCFullYear()+' ');
 });	

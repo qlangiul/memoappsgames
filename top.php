@@ -11,16 +11,20 @@
 	</head>
 
 	<body>
-		<img class="bg" src="imgs/nexus.jpg" />
+		<header>
+			<h1>Memo Apps and Games</h1>
+			<img class="bg" src="imgs/nexus.jpg" alt="Memo Apps and Games"/>
+		</header>
 		<div class="main_wrapper">
 			<img src="imgs/logo.png" class="logo" />
-			<ul class="menu">
-				<li><a href="index.php">Home</a></li>
-				<li><a href="apps.php">Apps</a></li>
-				<li><a href="games.php">Games</a></li>
-				<li><a href="contact.php">Contact</a></li>
-			</ul>
-			
+			<nav>
+				<ul class="menu">
+					<li><a href="index.php">Home</a></li>
+					<li><a href="apps.php">Apps</a></li>
+					<li><a href="games.php">Games</a></li>
+					<li><a href="contact.php">Contact</a></li>
+				</ul>
+			</nav>
 			<div class="to_be_deleted">
 				<div id="time"><span id="time-text"></span></div>
 
@@ -34,3 +38,4 @@
 					</div>
 				</div>
 			</div>
+			<div class="content_wrapper">

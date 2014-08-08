@@ -7,6 +7,9 @@ body{
 	margin:0;
 	font-family:arial;
 }
+h1{
+	display:none;
+}
 .main_wrapper{
 	position:relative;
 	overflow:hidden;
@@ -31,6 +34,7 @@ img.bg {
   position: fixed;
   top: 0;
   left: 0;
+  z-index:-1;
 }
 
 @media screen and (max-width: 1024px) { /* Specific to this particular image */
