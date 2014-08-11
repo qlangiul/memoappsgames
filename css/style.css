@@ -1,9 +1,24 @@
-html,body{
+html{
 	color:#ffffff;
 	padding:0;
 	margin:0;
 	font-family:arial;
 	height:100%;
+	margin: 0;
+	padding: 0;
+}
+body{
+	color:#ffffff;
+	padding:0;
+	margin:0;
+	font-family:arial;
+	height:100%;
+	margin: 0;
+	padding: 0;
+	background-image: url(../imgs/bg.jpg);
+	background-position: top right;
+	background-repeat: no-repeat;
+	background-color: #333;
 }
 h1{
 	display:none;
@@ -18,18 +33,6 @@ h1{
 	height:166px;
 	vertical-align: top;
 	float:left;
-}
-#bg {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index:-1;
-}
-.bgwidth {
-	width: 100%;
-}
-.bgheight {
-	height: 100%;
 }
 
 .copy{

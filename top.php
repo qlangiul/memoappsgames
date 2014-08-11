@@ -14,8 +14,6 @@
 		<div class="main_wrapper">
 		<header>
 			<h1>Memo Apps and Games</h1>
-			<!--img class="bg" src="imgs/nexus.jpg" alt="Memo Apps and Games"/-->
-			  <img id="bg" src="imgs/nexus.jpg" alt="Memo Apps and Games">
 		</header>		
 		<img src="imgs/logo.png" class="logo" />
 		<nav>
