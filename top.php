@@ -14,7 +14,8 @@
 		<div class="main_wrapper">
 		<header>
 			<h1>Memo Apps and Games</h1>
-			<img class="bg" src="imgs/nexus.jpg" alt="Memo Apps and Games"/>
+			<!--img class="bg" src="imgs/nexus.jpg" alt="Memo Apps and Games"/-->
+			  <img id="bg" src="imgs/nexus.jpg" alt="Memo Apps and Games">
 		</header>		
 		<img src="imgs/logo.png" class="logo" />
 		<nav>
@@ -25,17 +26,4 @@
 				<li><a href="contact.php">Contact</a></li>
 			</ul>
 		</nav>
-		<div class="to_be_deleted">
-			<div id="time"><span id="time-text"></span></div>
-
-			<div class="tst">
-				<div class="circle">
-					<div class="arc_q"></div>
-					<div class="arc_q"></div>
-					<div class="arc_q"></div>
-					<div class="arc_q"></div>
-					<div class="arc_cover"></div>
-				</div>
-			</div>
-		</div>
 		<div class="content_wrapper">

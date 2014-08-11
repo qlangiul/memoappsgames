@@ -1,7 +1,4 @@
 html,body{
-	/*background-image: url("../imgs/nexus.jpg");
-	background-repeat: no-repeat;
-	background-size:contain;*/
 	color:#ffffff;
 	padding:0;
 	margin:0;
@@ -22,22 +19,19 @@ h1{
 	vertical-align: top;
 	float:left;
 }
-
-img.bg {
-  /* Set rules to fill background */
-  min-height: 100%;
-  min-width: 1024px;
-	
-  /* Set up proportionate scaling */
-  width: 100%;
-  height: auto;
-	
-  /* Set up positioning */
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index:-1;
+#bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index:-1;
 }
+.bgwidth {
+	width: 100%;
+}
+.bgheight {
+	height: 100%;
+}
+
 .copy{
 	padding: 0 0 0 20px;
 }
@@ -49,13 +43,6 @@ footer{
 	left:0;
 	background:#000;
 }
-
-@media screen and (max-width: 1024px) { /* Specific to this particular image */
-  img.bg {
-    left: 50%;
-    margin-left: -512px;   /* 50% */
-  }
-}  
 
 .menu{
 	list-style:none;
@@ -82,59 +69,4 @@ footer{
 .menu > li > a:hover{
 	text-decoration:none;
 	opacity: 0.2;
-}
-
-#time{
-	width:100px;
-	height:100px;
-	margin: 20px 20px 0 0;
-	float:right;
-	text-align:center;
-	display:inline-block;
-	line-height:100px;
-	border:solid 3px #611794;
-	border-radius:50px;
-}
-#time-text{
-	font-size: 30px;
-	font-weight:normal;
-	color: #ffffff;
-	line-height: 1;
-	display: inline-block;
-	height: auto;
-	background: none;
-	vertical-align: middle;
-}
-.tst{
-	position:relative;
-	float:right;
-}
-/*to edit the watch*/
-.circle {
-    position:absolute;
-    margin:20px 0 0 0;
-	width: 120px;
-	height: 120px;
-}
-.arc_q {
-    position:absolute;
-    top:0;
-    left:0;
-    width:102px;
-    height:102px;
-    border-radius:50%;
-    border:3px solid;
-	border-color:transparent #E2E2E1 transparent transparent;
-	transform: rotate(-45deg);
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	-ms-transform: rotate(-45deg);
-	-o-transform: rotate(-45deg);
-}
-.arc_cover {
-    position:absolute;
-    top:0;
-    left:0;
-    width:60px;
-    height:60px;
 }
