@@ -9,8 +9,18 @@ require_once "top.php";
 	</div>
 	<div class="items-wrapper">
 		<ul class="apps-gamez">
-			<li><a href="">Sudoku 999</a></li>
-			<li><a href="">Tic Tac Toe 3D</a></li>
+			<li>
+				<a href="javascript:void(0);">
+					<img src="imgs/prods/1_1.jpg" alt="Sudoku 999">
+					<span class="app-name">Sudoku 999</span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0);">
+					<img src="imgs/prods/2_1.jpg" alt="Tic Tac Toe 3D">
+					<span class="app-name">Tic Tac Toe 3D</span>
+				</a>
+			</li>
 		</ul>
 	</div>
 <?
