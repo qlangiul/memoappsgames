@@ -15,10 +15,17 @@ body{
 	height:100%;
 	margin: 0;
 	padding: 0;
-	background-image: url(../imgs/bg.jpg);
-	background-position: top left;
-	background-repeat: no-repeat;
-	background-color: #202C5E;
+	/*background-position: top left;
+	background-repeat: repeat;
+	background-color: #202C5E;*/
+	background: rgba(33,45,94,1);
+	background: -moz-linear-gradient(left, rgba(33,45,94,1) 0%, rgba(33,46,94,0.78) 25%, rgba(33,45,94,0.57) 50%, rgba(33,45,94,0.79) 75%, rgba(33,45,94,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(33,45,94,1)), color-stop(25%, rgba(33,46,94,0.78)), color-stop(50%, rgba(33,45,94,0.57)), color-stop(75%, rgba(33,45,94,0.79)), color-stop(100%, rgba(33,45,94,1)));
+	background: -webkit-linear-gradient(left, rgba(33,45,94,1) 0%, rgba(33,46,94,0.78) 25%, rgba(33,45,94,0.57) 50%, rgba(33,45,94,0.79) 75%, rgba(33,45,94,1) 100%);
+	background: -o-linear-gradient(left, rgba(33,45,94,1) 0%, rgba(33,46,94,0.78) 25%, rgba(33,45,94,0.57) 50%, rgba(33,45,94,0.79) 75%, rgba(33,45,94,1) 100%);
+	background: -ms-linear-gradient(left, rgba(33,45,94,1) 0%, rgba(33,46,94,0.78) 25%, rgba(33,45,94,0.57) 50%, rgba(33,45,94,0.79) 75%, rgba(33,45,94,1) 100%);
+	background: linear-gradient(to right, rgba(33,45,94,1) 0%, rgba(33,46,94,0.78) 25%, rgba(33,45,94,0.57) 50%, rgba(33,45,94,0.79) 75%, rgba(33,45,94,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#212d5e', endColorstr='#212d5e', GradientType=1 );
 }
 h1{
 	display:none;
@@ -153,74 +160,42 @@ span.app-name{
 	bottom:-50px;
 	left:0;
 }
-
-.modalDialog {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: rgba(0,0,0,0.8);
-	color:#959595;
-	z-index: 99999;
-	opacity:0;
-	-webkit-transition: opacity 400ms ease-in;
-	-moz-transition: opacity 400ms ease-in;
-	transition: opacity 400ms ease-in;
-	pointer-events: none;
+.modalDialog{
+	display:none;
 }
-.modalDialog:target {
-	opacity:1;
-	pointer-events: auto;
-}
-.modalDialog > div {
-	width: 80%;
-	position: relative;	
-	margin: 5% auto;
+.content{
 	font-family: 'PT Sans', sans-serif;
-	padding: 5px 20px 13px 20px;
-	border-radius: 10px;
-	background: #191919;	
+	padding: 5px 13px 100px 20px;
 	text-align:left;	
+	overflow:hidden;
 }
-.modalDialog > div > h2{
+.content > .left{
+	float:left;
+	max-width:600px;
+}
+.content > .right{
+	float:left;
+	width:270px;
+	height: 480px;
+	text-align:center;
+	overflow:hidden;
+}
+.content   > h2{
 	font: 1.8em /0.85em 'Contrail One';
 	color: #fff;
 	text-transform:uppercase;
 	padding: 0 0 20px 0;
 	border-bottom: solid 1px #959595
 }
-.modalDialog > div > h3{
+.content > .left > h3{
 	color: #fff;
 	font: 1.2em /0.85em 'Contrail One';
 	border-top: solid 1px #959595;
 	padding-top: 20px;
 }
-
-
-.modalDialog .changes{
+.content .changes{
 	font-family: 'PT Sans', sans-serif;
 }
-.close {
-	background: #606061;
-	color: #FFFFFF;
-	line-height: 25px;
-	position: absolute;
-	right: -12px;
-	text-align: center;
-	font-family:arial;
-	top: -10px;
-	width: 25px;
-	text-decoration: none;
-	font-weight: bold;
-	-webkit-border-radius: 12px;
-	-moz-border-radius: 12px;
-	border-radius: 12px;
-	-moz-box-shadow: 1px 1px 3px #000;
-	-webkit-box-shadow: 1px 1px 3px #000;
-	box-shadow: 1px 1px 3px #000;
+.description{
+	margin:55px 30px 0 0;
 }
-.close:hover {
-	background: #fff;
-	color:#000;
-} 
