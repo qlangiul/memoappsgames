@@ -26,13 +26,13 @@
 		<header>
 			<h1>Memo Apps and Games</h1>
 		</header>		
-		<img src="/imgs/logo.png" class="logo" />
+		<a href="/" title="home"><img src="/imgs/logo.png" class="logo" alt="Memo Apps and Games Logo"/></a>
 		<nav>
 			<ul class="menu">
-				<li><a href="/">Home</a></li>
-				<li><a href="/apps">Apps</a></li>
-				<li><a href="/games">Games</a></li>
-				<li><a href="/contact">Contact</a></li>
+				<li><a href="/" title="Home">Home</a></li>
+				<li><a href="/apps" title="apps">Apps</a></li>
+				<li><a href="/games" title="games">Games</a></li>
+				<li><a href="/contact" title="contact us">Contact</a></li>
 			</ul>
 			<div style="clear:both"></div>
 		</nav>

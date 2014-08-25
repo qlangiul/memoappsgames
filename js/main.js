@@ -18,6 +18,10 @@ var isMobile = {
         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
     }
 };
+//captcha options
+var RecaptchaOptions = {
+	theme : 'white'
+ };
  
 $(document).ready(function(){
 	$('.the-names').flexslider({
@@ -46,12 +50,49 @@ $(document).ready(function(){
 	}else{
 		device.type='desktop';
 	}
-	console.log(device.type);
-});
+	//console.log(device.type);
+	$('body').on('click','.app-link', function(){
+		if(device.type=='desktop'){
+			var current_loc=window.location.href;
+			var extended_loc=$(this).data('desktop');
+			var hash = window.location.hash;
+			if(hash!=""){
+				window.location.hash=extended_loc;
+			}else{
+				window.location.href = current_loc+extended_loc;
+			}
+		}else if(device.type=='mobile'){
+			var current_loc=window.location.origin;
+			var extended_loc=$(this).data('mobile');
+			console.log(current_loc);
+			console.log(extended_loc);
+			window.location.href= current_loc+extended_loc;
+		}
+	});
 
+	$(document).keyup(function(e) {
+		if (e.keyCode == 27) { // esc keycode
+			$('.modalDialog').each(function(){
+				if($(this).css("opacity")==1){
+					window.location.hash='#close';
+				}				
+			});	
+		}
+	});
+	
+	$(document).on('click', function (e) {
+		$('.modalDialog').each(function(){
+			if($(this).css("opacity")==1){
+				if ($(e.target).closest(".content").length === 0) {
+					window.location.hash='#close';
+				}
+			}				
+		});	
+	});
+});
 $(window).load(function() {
   // The slider being synced must be initialized first
-  $('#slider').flexslider({
+  $('.flexslider').flexslider({
     animation: "slide",
     controlNav: false,
     animationLoop: false,

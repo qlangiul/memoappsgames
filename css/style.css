@@ -160,14 +160,10 @@ span.app-name{
 	bottom:-50px;
 	left:0;
 }
-.modalDialog{
-	display:none;
-}
 .content{
 	font-family: 'PT Sans', sans-serif;
 	padding: 5px 13px 100px 20px;
 	text-align:left;	
-	overflow:hidden;
 }
 .content > .left{
 	float:left;
@@ -196,6 +192,85 @@ span.app-name{
 .content .changes{
 	font-family: 'PT Sans', sans-serif;
 }
-.description{
-	margin:55px 30px 0 0;
+
+.content_wrapper .content  .description{
+	margin:10px 30px 0 0;
+}
+.modalDialog  .description{
+	margin:55px 30px 0 0!important;
+}
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+.modalDialog > div {
+	max-width: 900px;
+	position: relative;
+	margin: 5% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #191919;
+}
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover {
+	background: #00d9ff;
+}
+iframe[src="about:blank"]{display:none;}
+.form-wrapp{
+	text-align:center;
+	margin-bottom:70px;
+}
+.form-wrapp input[type="text"],
+.form-wrapp input[type="email"],
+.form-wrapp textarea{
+	width:340px;
+	text-align:left;
+}
+.form-inner-wrapp{
+	width:340px;
+	margin:0 auto;
+	text-align:left;
+}
+.valid{
+	text-align:center;
+}
+.valid.error{
+	text-align:center;
+	color:#FFA555;
+}
+label.error{
+	color:#FFA555;
 }
