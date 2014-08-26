@@ -32,7 +32,7 @@ else:
 							$str.='<a href="#close" title="Close" class="close">X</a>';
 							$str.='<h2><span>'.$item->nume_item.'</span></h2>';
 							$str.='<div class="left">';
-								$str.='<p class="description">'.$item->descriere_item.'</p>';
+								$str.='<div class="description">'.$item->descriere_item.'</div>';
 							$str.='</div>';
 							$str.='<div class="right">';
 								$str.='<a href="'.$item->link.'" target="_blank"><img alt="Get it on Google Play" src="/imgs/en_generic_rgb_wo_45.png" /></a>';
@@ -43,9 +43,9 @@ else:
 									}
 									$str.='</ul>';
 								$str.='</div>';
-							$str.='</div><div style="clear:left;">';	
+							$str.='</div><div style="clear:left;"></div>';	
 							$str.='<h3>What&apos;s new in v'.$item->version.'</h3>';
-							$str.='<p class="changes">'.$item->what_is_new.'</p>';
+							$str.='<div class="changes">'.$item->what_is_new.'</div>';
 						$str.='</div>';
 					$str.='</div>';
 

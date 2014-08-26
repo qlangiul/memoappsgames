@@ -5,7 +5,6 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<meta name="description" content="Games, applications and widgets for Android phones and tablets produced and designed by Memo Apps and Games">
 		<meta name="keywords" content="Games,applications,widgets,Android, phones, tablets">

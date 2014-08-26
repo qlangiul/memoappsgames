@@ -1,3 +1,19 @@
+var ie = (function(){
+
+    var undef,
+        v = 3,
+        div = document.createElement('div'),
+        all = div.getElementsByTagName('i');
+
+    while (
+        div.innerHTML = '<!--[if gt IE ' + (++v) + ']><i></i><![endif]-->',
+        all[0]
+    );
+
+    return v > 4 ? v : undef;
+
+}());
+
 var isMobile = {
     Android: function() {
         return navigator.userAgent.match(/Android/i);
@@ -24,6 +40,11 @@ var RecaptchaOptions = {
  };
  
 $(document).ready(function(){
+	if(ie <= 8){
+		$('.content_wrapper').empty();
+		$('.content_wrapper').append('<h1 style="text-align:center;display:block">Please update your Internet Explorer</h1>');
+		$('.content_wrapper').append('<h2 style="text-align:center">We no longer support Internet Explorer 8 or older</h2>');
+	}
 	$('.the-names').flexslider({
 		controlNav: false,
 		directionNav: false,
@@ -51,8 +72,9 @@ $(document).ready(function(){
 		device.type='desktop';
 	}
 	//console.log(device.type);
-	$('body').on('click','.app-link', function(){
-		if(device.type=='desktop'){
+	$('body').on('click','.app-link', function(event){
+		event.preventDefault();
+		if(device.type=='desktop' && ie>8){
 			var current_loc=window.location.href;
 			var extended_loc=$(this).data('desktop');
 			var hash = window.location.hash;
@@ -61,11 +83,12 @@ $(document).ready(function(){
 			}else{
 				window.location.href = current_loc+extended_loc;
 			}
-		}else if(device.type=='mobile'){
+		}else if(device.type=='mobile' || ie<=8){
+			if (!window.location.origin) {
+			  window.location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port: '');
+			}
 			var current_loc=window.location.origin;
 			var extended_loc=$(this).data('mobile');
-			console.log(current_loc);
-			console.log(extended_loc);
 			window.location.href= current_loc+extended_loc;
 		}
 	});
@@ -80,15 +103,7 @@ $(document).ready(function(){
 		}
 	});
 	
-	$(document).on('click', function (e) {
-		$('.modalDialog').each(function(){
-			if($(this).css("opacity")==1){
-				if ($(e.target).closest(".content").length === 0) {
-					window.location.hash='#close';
-				}
-			}				
-		});	
-	});
+
 });
 $(window).load(function() {
   // The slider being synced must be initialized first
