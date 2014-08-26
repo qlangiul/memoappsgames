@@ -20,7 +20,22 @@ if (isset($_POST['submit'])) {
 			 "<p class='valid error'>(reCAPTCHA said: " . $resp->error . ")</p>");
 		} else {
 		// Your code here to handle a successful verification
-		echo "<p class='valid'>Email Sent</p>";
+		echo "<p class='valid'>Email Sent<br/>Thank you for sending us feedback</p>";
+		$from = $_POST["yourname"]; // sender
+		$from_email = $_POST["email"]; // sender
+		$subject = $_POST["subject"];
+		$message = $_POST["message"];
+		// message lines should not exceed 70 characters (PHP rule), so wrap it
+		$message = wordwrap($message, 70);
+		$headers   = array();
+		$headers[] = "MIME-Version: 1.0";
+		$headers[] = "Content-type: text/plain; charset=iso-8859-1";
+		$headers[] = "From: {$from} <{$from_email}>";
+		$headers[] = "Subject: {$subject}";
+		$headers[] = "X-Mailer: PHP/".phpversion();
+		
+		// send mail
+		mail("office@memoappsgames.0fees.us",$subject,$message,implode("\r\n", $headers));		
 		}
 	}
 ?>

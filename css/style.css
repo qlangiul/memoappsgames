@@ -251,7 +251,7 @@ span.app-name{
 iframe[src="about:blank"]{display:none;}
 .form-wrapp{
 	text-align:center;
-	margin-bottom:70px;
+	margin:40px 0 70px 0;
 }
 .form-wrapp input[type="text"],
 .form-wrapp input[type="email"],
@@ -273,4 +273,20 @@ iframe[src="about:blank"]{display:none;}
 }
 label.error{
 	color:#FFA555;
+}
+.form-wrapp input[type="submit"]{
+	padding: 10px 20px 11px !important;
+	font-size: 21px !important;
+	background-color: #611794;
+	font-weight: bold;
+	text-shadow: 1px 1px #611794;
+	color: #ffffff;
+	border-radius: 100px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border: 1px solid #611794;
+	cursor: pointer;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 }
